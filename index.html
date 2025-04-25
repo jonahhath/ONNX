@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFAR Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="./index.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table, th, td { border: 1px solid; margin: 0 auto; }
+        #upload { margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>CIFAR-10 Image Classifier, Jonah Hathaway, Antonio Soto </h1>
+    <p> CIFAR-10 Classes are: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck</p>
+
+
+    <input id="upload" type="file" accept="image/*" onchange="handleImage(event)" />
+    <div id="status">Upload an image:</div>
+    <div id="image-preview"></div>
+    
+    <div id="predictions"></div>
+</body>
+</html>
