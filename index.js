@@ -63,12 +63,6 @@ function softmax(arr) {
     return exps.map(x => x / sum);
 }
 
-const maxProb = Math.max(...output);
-if (maxProb < 0.4) {  
-    document.getElementById('predictions').innerHTML = `<h2>Prediction: Unknown</h2>`;
-    return;
-}
-
 
 function showPredictions(output) {
     document.getElementById('status').textContent = "Status: Finished!";
